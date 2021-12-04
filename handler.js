@@ -28,29 +28,5 @@ module.exports.getName = async (event) => {
 };
 
 const getNamesFromDatabase =() => {
-  return [  {
-  "Name": 'Natalia',
-  "id": 1,
-  "Gender": 'Female'
-},
-{
-  "Name": 'Roman',
-  "id": 2,
-  "Gender": 'Male'
-},
-{
-  "Name": 'Randy',
-  "id": 3,
-  "Gender": 'Transgender'
-},
-{
-  "Name": 'Alina',
-  "id": 4,
-  "Gender": 'Female'
-},
-{
-  "Name": 'Francisco',
-  "id": 5,
-  "Gender": 'Male'
+
 }
-]}
