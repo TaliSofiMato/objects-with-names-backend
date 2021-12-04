@@ -15,31 +15,42 @@ module.exports.getNames = async (event) => {
   };
 return x
 };
+module.exports.getName = async (event) => {
+  let allNames = getNamesFromDatabase()
+  let foundName = allNames.find((Name)=>{
+    return Name.id == event.pathParameters.id
+    }) 
+  return {
+    statusCode: 200,
+    body: JSON.stringify(foundName)
+
+  };
+};
 
 const getNamesFromDatabase =() => {
   return [  {
   "Name": 'Natalia',
   "id": 1,
-  "completed": true
+  "Gender": 'Female'
 },
 {
   "Name": 'Roman',
   "id": 2,
-  "completed": true
+  "Gender": 'Male'
 },
 {
   "Name": 'Randy',
   "id": 3,
-  "completed": true
+  "Gender": 'Transgender'
 },
 {
   "Name": 'Alina',
   "id": 4,
-  "completed": false
+  "Gender": 'Female'
 },
 {
   "Name": 'Francisco',
   "id": 5,
-  "completed": false
+  "Gender": 'Male'
 }
 ]}
