@@ -1,0 +1,18 @@
+service: objects-with-names-api
+
+frameworkVersion: '2'
+
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: '20201221'
+
+functions:
+  getTodos:
+    handler: handler.getNames
+    events:
+      - http:
+          path: /Names
+          method: get
+
